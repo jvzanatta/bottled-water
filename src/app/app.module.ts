@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProductComponent } from './product/product.component';
 import { BannerComponent } from './banner/banner.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { HttpModule } from '@angular/http';
+import { StoreService } from './services/store.service';
 
 
 @NgModule({
@@ -16,14 +18,18 @@ import { HttpModule } from '@angular/http';
     HomePageComponent,
     ProductComponent,
     BannerComponent,
-    TopBarComponent
+    TopBarComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
+    HttpClientModule,
+    HttpModule,
   ],
   providers: [
-    HttpModule
+    HttpClientModule,
+    HttpModule,
+    StoreService
   ],
   bootstrap: [AppComponent]
 })

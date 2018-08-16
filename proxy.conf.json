@@ -1,0 +1,14 @@
+{
+  "/fijiwater/*": {
+    "target": "http://sneakpeeq-sites.s3.amazonaws.com/",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/interviews/*": {
+    "target": "http://sneakpeeq-sites.s3.amazonaws.com/",
+    "changeOrigin": true,
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
