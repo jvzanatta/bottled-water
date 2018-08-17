@@ -1,0 +1,10 @@
+.product {
+  display: inline-block;
+
+}
+
+.product p {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Gotham A","Gotham B",Gotham,sans-serif;
+}

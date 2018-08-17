@@ -10,6 +10,7 @@ import { ProductComponent } from './product/product.component';
 import { BannerComponent } from './banner/banner.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { StoreService } from './services/store.service';
+import { ProductListComponent } from './product-list/product-list.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { StoreService } from './services/store.service';
     ProductComponent,
     BannerComponent,
     TopBarComponent,
+    ProductListComponent,
   ],
   imports: [
     AppRoutingModule,
