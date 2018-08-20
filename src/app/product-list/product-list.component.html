@@ -1,3 +1,6 @@
+<div>
+  <app-product-sort (sortOrderChange)="onSortOrderChange($event)"></app-product-sort>
+</div>
 <div class="grid">
   <ng-container *ngFor="let product of productList">
     <app-product [product]="product">

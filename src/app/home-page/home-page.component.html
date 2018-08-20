@@ -2,15 +2,15 @@
 
 </app-top-bar>
 
-<app-banner
-  [bannerData]="storeData.bannerImage"
-  [mobileBannerData]="storeData.bannerImageMobile">
+<div *ngIf="storeData">
+  <app-banner
+    [bannerData]="storeData.bannerImage"
+    [mobileBannerData]="storeData.bannerImageMobile">
+  </app-banner>
+</div>
 
-</app-banner>
-
-<app-product-list
-  [productList]="storeData.products">
-
-</app-product-list>
-
-<div>{{storeData}}</div>
+<div *ngIf="storeData">
+  <app-product-list
+    [productList]="storeData.products">
+  </app-product-list>
+</div>

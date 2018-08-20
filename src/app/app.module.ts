@@ -11,6 +11,8 @@ import { BannerComponent } from './banner/banner.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { StoreService } from './services/store.service';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductSortComponent } from './product-sort/product-sort.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 @NgModule({
@@ -21,8 +23,10 @@ import { ProductListComponent } from './product-list/product-list.component';
     BannerComponent,
     TopBarComponent,
     ProductListComponent,
+    ProductSortComponent,
   ],
   imports: [
+    AngularFontAwesomeModule,
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,

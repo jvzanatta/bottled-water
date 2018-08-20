@@ -1,0 +1,8 @@
+<select (change)="sortOptionChange($event)" class="form-control" id="option" required >
+  <option *ngFor="let option of sortOptions" [value]="option">{{ option | uppercase }}</option>
+</select>
+
+<button (click)="toggleOrder()">
+  <fa *ngIf="sortAscending; else sortDescending" name="arrow-up"></fa>
+  <ng-template #sortDescending><fa name="arrow-down"></fa></ng-template>
+</button>
