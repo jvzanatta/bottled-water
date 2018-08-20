@@ -9,6 +9,8 @@ import { map, takeUntil, tap } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
 
+
+
 const API_URL = environment.apiUrl;
 const GET_URL = '/interviews/ce/feeds/store.js';
 
@@ -23,7 +25,7 @@ export class StoreService {
    * Gets data from the exercise's endpoint.
    */
   public getStore(): Observable<Store> {
-    return this.http.get(GET_URL)
+    return this.http.get(API_URL + GET_URL)
       .pipe(
         map(res => res.json())
       );

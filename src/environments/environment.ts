@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:4200/api'
+  apiUrl: 'http://sneakpeeq-sites.s3.amazonaws.com'
 };
 
 /*
