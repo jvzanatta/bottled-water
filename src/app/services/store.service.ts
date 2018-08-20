@@ -19,6 +19,9 @@ export class StoreService {
 
   constructor(private http: Http) { }
 
+  /**
+   * Gets data from the exercise's endpoint.
+   */
   public getStore(): Observable<Store> {
     return this.http.get(GET_URL)
       .pipe(

@@ -17,27 +17,14 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Sets the parameters to feed the sorting pipe.
+   * @param sort
+   */
   onSortOrderChange(sort) {
-    this.sortProducts(sort.selectedSortOption, sort.sortAscending);
+    this.sortOption = sort.selectedSortOption;
+    this.sortAscending = sort.sortAscending;
   }
 
-  sortProducts(sortOption: string, sortAscending: boolean) {
-    this.sortOption = sortOption;
-    this.sortAscending = sortAscending;
-/*     this.productList.sort(this.compareProducts);
- */  }
-
-/*   compareProducts(a: Product, b: Product) {
-    function compare(a, b) {
-      if (a is less than b by some ordering criterion) {
-        return -1;
-      }
-      if (a is greater than b by the ordering criterion) {
-        return 1;
-      }
-      // a must be equal to b
-      return 0;
-    }
-  } */
 
 }

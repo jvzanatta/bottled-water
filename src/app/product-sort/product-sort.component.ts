@@ -26,16 +26,26 @@ export class ProductSortComponent implements OnInit {
     this.emitSortingData();
   }
 
+  /**
+   * Toggles the Ascending/descending button and emits change.
+   */
   toggleOrder() {
     this.sortAscending = !this.sortAscending;
     this.emitSortingData();
   }
 
+  /**
+   * Sets the sort option variable and triggers emits change.
+   * @param event
+   */
   sortOptionChange(event) {
     this.selectedSortOption = event.target.value;
     this.emitSortingData();
   }
 
+  /**
+   * Emits the changes to parent component
+   */
   emitSortingData() {
     this.sortOrderChange.emit({
       selectedSortOption: this.selectedSortOption,
