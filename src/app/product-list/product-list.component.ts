@@ -18,17 +18,16 @@ export class ProductListComponent implements OnInit {
   }
 
   onSortOrderChange(sort) {
-    console.log(sort);
     this.sortProducts(sort.selectedSortOption, sort.sortAscending);
   }
 
   sortProducts(sortOption: string, sortAscending: boolean) {
     this.sortOption = sortOption;
     this.sortAscending = sortAscending;
-    this.productList.sort(this.compareProducts);
-  }
+/*     this.productList.sort(this.compareProducts);
+ */  }
 
-  compareProducts(a: Product, b: Product) {
+/*   compareProducts(a: Product, b: Product) {
     function compare(a, b) {
       if (a is less than b by some ordering criterion) {
         return -1;
@@ -39,6 +38,6 @@ export class ProductListComponent implements OnInit {
       // a must be equal to b
       return 0;
     }
-  }
+  } */
 
 }

@@ -13,6 +13,7 @@ import { StoreService } from './services/store.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductSortComponent } from './product-sort/product-sort.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { OrderModule } from 'ngx-order-pipe';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     AngularFontAwesomeModule,
     AppRoutingModule,
     BrowserModule,
+    OrderModule,
     HttpClientModule,
     HttpModule,
   ],

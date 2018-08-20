@@ -9,14 +9,18 @@ export class ProductSortComponent implements OnInit {
 
   @Output() sortOrderChange = new EventEmitter();
 
+  sortOptions: {};
   selectedSortOption: string;
-  sortOptions: Array<string>;
   sortAscending: boolean;
 
   constructor() { }
 
   ngOnInit() {
-    this.sortOptions = ['name', 'price', 'date'];
+    this.sortOptions = [
+      { displayName: 'name', propertyName: 'name' },
+      { displayName: 'price', propertyName: 'defaultPriceInCents'},
+      { displayName: 'date' , propertyName: 'createdAt' }
+    ];
     this.sortAscending = true;
     this.selectedSortOption = 'name';
     this.emitSortingData();
@@ -28,7 +32,6 @@ export class ProductSortComponent implements OnInit {
   }
 
   sortOptionChange(event) {
-    console.log(event.target.value);
     this.selectedSortOption = event.target.value;
     this.emitSortingData();
   }

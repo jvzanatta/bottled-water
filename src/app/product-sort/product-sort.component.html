@@ -1,5 +1,5 @@
 <select (change)="sortOptionChange($event)" class="form-control" id="option" required >
-  <option *ngFor="let option of sortOptions" [value]="option">{{ option | uppercase }}</option>
+  <option *ngFor="let option of sortOptions" [value]="option.propertyName">{{ option.displayName | uppercase }}</option>
 </select>
 
 <button (click)="toggleOrder()">
