@@ -4,12 +4,12 @@
   "main": "server.js",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --aot --prod"
+    "heroku-postbuild": "npm install -g @angular/cli"
   },
   "private": true,
   "engines": {
