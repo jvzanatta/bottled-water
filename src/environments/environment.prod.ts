@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://sneakpeeq-sites.s3.amazonaws.com'
+  apiUrl: 'https://sneakpeeq-sites.s3.amazonaws.com'
 };
