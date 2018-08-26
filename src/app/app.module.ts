@@ -14,6 +14,10 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductSortComponent } from './product-sort/product-sort.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { OrderModule } from 'ngx-order-pipe';
+import { ProductCartButtonComponent } from './product-cart-button/product-cart-button.component';
+import { CartButtonComponent } from '@app/cart-button/cart-button.component';
+import { CartComponent } from './cart/cart.component';
+import { NgbModalModule, NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -25,6 +29,9 @@ import { OrderModule } from 'ngx-order-pipe';
     TopBarComponent,
     ProductListComponent,
     ProductSortComponent,
+    ProductCartButtonComponent,
+    CartButtonComponent,
+    CartComponent,
   ],
   imports: [
     AngularFontAwesomeModule,
@@ -33,11 +40,18 @@ import { OrderModule } from 'ngx-order-pipe';
     OrderModule,
     HttpClientModule,
     HttpModule,
+    NgbModalModule,
+  ],
+  exports: [
+    CartComponent,
   ],
   providers: [
     HttpClientModule,
     HttpModule,
-    StoreService
+    StoreService,
+  ],
+  entryComponents: [
+    CartComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -9,6 +9,9 @@ import { Product } from '../classes/product';
 export class ProductListComponent implements OnInit {
 
   @Input() productList;
+  @Input() showAddToCartButton;
+  @Input() enableSorting;
+
   sortOption: string;
   sortAscending: boolean;
 

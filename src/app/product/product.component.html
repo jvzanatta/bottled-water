@@ -2,4 +2,8 @@
   <img [src]="product.mainImage.ref" />
   <p>{{product.name}}</p>
   <p>{{ product.defaultPriceInCents / 100 | currency}}</p>
+  <div *ngIf="showAddToCartButton">
+    <app-product-cart-button [product]="product">
+    </app-product-cart-button>
+  </div>
 </div>

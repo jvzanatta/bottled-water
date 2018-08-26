@@ -9,8 +9,14 @@
   </app-banner>
 </div>
 
+<div>
+    <app-cart-button></app-cart-button>
+</div>
+
 <div *ngIf="storeData">
   <app-product-list
-    [productList]="storeData.products">
+    [productList]="storeData.products"
+    [showAddToCartButton]="showAddToCartButton"
+    [enableSorting]="enableSorting">
   </app-product-list>
 </div>
