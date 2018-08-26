@@ -6,10 +6,12 @@
 </div>
 <div class="modal-body">
   <app-product-list
+    *ngIf="productList.length > 0; else noProductsMessage"
     [productList]="productList"
     [showAddToCartButton]="showAddToCartButton"
     [enableSorting]="enableSorting"
     ></app-product-list>
+    <ng-template #noProductsMessage>There are no products to show.</ng-template>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>

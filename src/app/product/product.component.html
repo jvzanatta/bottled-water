@@ -1,5 +1,5 @@
 <div class="product">
-  <img [src]="product.mainImage.ref" />
+  <img [src]="product.mainImage.ref" class="productImage" />
   <p>{{product.name}}</p>
   <p>{{ product.defaultPriceInCents / 100 | currency}}</p>
   <div *ngIf="showAddToCartButton">
