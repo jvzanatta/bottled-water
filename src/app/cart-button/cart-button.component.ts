@@ -29,6 +29,6 @@ export class CartButtonComponent implements OnInit {
   }
 
   goToCart() {
-    const modalRef = this.modalService.open(CartComponent, { size: 'lg', centered: 'true' });
+    const modalRef = this.modalService.open(CartComponent, { size: 'lg', centered: true });
   }
 }
